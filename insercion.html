@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/estilologin.css">
+    <link rel="stylesheet" href="./css/estiloinsercionmod.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./img/favicon2.png" type="image/x-icon">
-    <title>Log In</title>
+    <title>Insertar datos</title>
 </head>
 <body>
     
 <div class="container">
     <form>
-    <p id="login">LOG IN</p>
+    <p id="titulo">INSERTAR DATOS</p>
     <input type="username" name="username" placeholder="Usuario"><br>
     <input type="password" name="password" placeholder="Contraseña"><br>
-    <input id="signin" type="submit" value="SIGN IN"><br>
+    <label for="date">Fecha de nacimiento</label><br>
+    <input type="date" name="date" id="date"><br>
+    <input type="text" name="comidafavorita" placeholder="Comida favorita"><br>
+    <input id="insertar" type="submit" value="INSERTAR"><br>
     </form>
 
     <div class="drops">

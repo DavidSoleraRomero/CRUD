@@ -6,18 +6,18 @@
     <link rel="stylesheet" href="./css/estilocrud.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="./img/favicon2.png" type="image/x-icon">
-    <title>Interfaz CRUD</title>
+    <title>Tabla de datos</title>
 </head>
 <body>
 <div class="container">
     <table>
-        <caption>Manipulación</caption>
+        <caption>Tabla de datos</caption>
         <thead>
             <tr>
-                <th scope="col">Account</th>
-                <th scope="col">Due Date</th>
-                <th scope="col">Amount</th>
-                <th scope="col">Period</th>
+                <th scope="col">USUARIO</th>
+                <th scope="col">CONTRASEÑA</th>
+                <th scope="col">FECHA NACIMIENTO</th>
+                <th scope="col">COMIDA FAVORITA</th>
                 <th scope="col">ADMIN</th>
             </tr>
         </thead>
@@ -28,7 +28,6 @@
                 <td data-label="Amount">$1,190</td>
                 <td data-label="Period">03/01/2016 - 03/31/2016</td>
                 <td data-label="Edición">
-                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
                     <i class="fa fa-refresh" aria-hidden="true"></i>
                     <i class="fa fa-window-close" aria-hidden="true"></i>
                 </td>
@@ -39,7 +38,6 @@
                 <td data-label="Amount">$2,443</td>
                 <td data-label="Period">02/01/2016 - 02/29/2016</td>
                 <td data-label="Edición">
-                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
                     <i class="fa fa-refresh" aria-hidden="true"></i>
                     <i class="fa fa-window-close" aria-hidden="true"></i>
                 </td>
@@ -50,7 +48,6 @@
                 <td data-label="Amount">$1,181</td>
                 <td data-label="Period">02/01/2016 - 02/29/2016</td>
                 <td data-label="Edición">
-                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
                     <i class="fa fa-refresh" aria-hidden="true"></i>
                     <i class="fa fa-window-close" aria-hidden="true"></i>
                 </td>
@@ -61,12 +58,15 @@
                 <td data-label="Amount">$842</td>
                 <td data-label="Period">01/01/2016 - 01/31/2016</td>
                 <td data-label="Edición">
-                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
                     <i class="fa fa-refresh" aria-hidden="true"></i>
                     <i class="fa fa-window-close" aria-hidden="true"></i>
                 </td>
             </tr>
         </tbody>
+        <div id="insertar">
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            <span>Insertar datos</span>
+        </div>
     </table>
     <div class="drops">
         <div class="drop drop-1"></div>
@@ -80,6 +80,7 @@
         <div class="drop drop-9"></div>
         <div class="drop drop-10"></div>
     </div>
+
 </div>
 </body>
 </html>

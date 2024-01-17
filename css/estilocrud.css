@@ -14,19 +14,38 @@ html {height: 100%;}
 body {
     margin: 0;
     padding: 0 5%;
-    background: linear-gradient(50deg, rgb(72, 72, 72),  #0c0c0c);
+    background: linear-gradient(50deg, rgb(97, 97, 97),  #000000);
     font-family: "Montserrat";
     color: #fff;}
 
-/* Contenedor del formulario */
+/* Contenedor de la tabla */
 .container {position: absolute; width: 90%;}
 
-table tbody .fa {cursor: pointer; font-size: 2em;}
+/* Estilado iconos */
+table tbody .fa, #insertar {cursor: pointer; font-size: 2em;}
 table tbody .fa-window-close:hover {color: rgb(238, 78, 78); transition: 0.5s ease-in;}
 table tbody .fa-refresh:hover {color: rgb(236, 183, 83); transition: 0.5s ease-in;}
-table tbody .fa-plus-circle:hover {color: rgb(164, 231, 76); transition: 0.5s ease-in;}
-table tbody .fa-plus-circle {font-size: 2.1em;}
 
+#insertar {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    bottom: -17.5%;
+    left: 15px;
+    font-size: 1.75rem;
+    font-family: texto1;
+    border: 3px solid white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#insertar:hover {
+    border-color: rgb(164, 231, 76); 
+    background-color: rgb(164, 231, 76, 0.2);
+    color: rgb(164, 231, 76); 
+    transition: 1s ease-out; }
+
+/* Estilado tabla */
 table {
     margin-top: 25px;
     width: 100%;
@@ -119,10 +138,11 @@ table tr:nth-child(even) {background: rgba(197, 197, 197, 0.25);}
     left: 13.5%;
     z-index: -1;}
 .drop-9 {
-    height: 65px;
-    width: 65px;
-    bottom: -30px;
-    left: -25px;}
+    height: 80px;
+    width: 80px;
+    bottom: -27.5px;
+    left: -20px;
+    z-index: -1;}
 .drop-10 {
     height: 132.5px;
     width: 132.5px;
@@ -130,16 +150,14 @@ table tr:nth-child(even) {background: rgba(197, 197, 197, 0.25);}
     left: 47.5%;
     z-index: -1;}
     
-@media screen and (max-width: 1385px) {
-    .drop-1 {left: -32.5px; z-index: -1;}
-}
+/* Media Queries */
+@media screen and (max-width: 1385px) {.drop-1 {left: -32.5px; z-index: -1;}}
 
-@media screen and (max-width: 925px) { 
-    .drop-3 {top: 34%; right: -20px; z-index: -1;}
-}
-
+@media screen and (max-width: 925px) { .drop-3 {top: 34%; right: -20px; z-index: -1;}}
 
 @media screen and (max-width: 775px) {
+    #insertar {bottom: -5.825%; font-size: 1.15rem;}
+
     .drop-9 {bottom: -30px; left: 10px;}
 
     .drop-2 {right: 50px; bottom: -45px;}
@@ -184,10 +202,6 @@ table tr:nth-child(even) {background: rgba(197, 197, 197, 0.25);}
         text-align: right;}
     
     table td::before {
-        /*
-        * aria-label has no advantage, it won't be read inside a table
-        content: attr(aria-label);
-        */
         content: attr(data-label);
         margin-right: 5.5px;
         float: left;
@@ -195,3 +209,7 @@ table tr:nth-child(even) {background: rgba(197, 197, 197, 0.25);}
         text-transform: uppercase;}
     
     table td:last-child {border-bottom: 0;}}
+
+    @media screen and (max-width: 350px) { 
+        .drop-2 {z-index: -1;}
+    }

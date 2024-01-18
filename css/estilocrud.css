@@ -9,7 +9,7 @@
 /* Estilado general */
 * {box-sizing: border-box;}
 
-html {height: 100%;}
+html {height: 100vh;}
 
 body {
     margin: 0;
@@ -25,6 +25,8 @@ body {
 table tbody .fa, #insertar {cursor: pointer; font-size: 2em;}
 table tbody .fa-window-close:hover {color: rgb(238, 78, 78); transition: 0.5s ease-in;}
 table tbody .fa-refresh:hover {color: rgb(236, 183, 83); transition: 0.5s ease-in;}
+
+/* Estilado icono + y botón inserción */
 
 #insertar {
     position: absolute;
@@ -103,10 +105,10 @@ table tr:nth-child(even) {background: rgba(197, 197, 197, 0.25);}
     bottom: -47.5px;
     right: -10px;}
 .drop-3 {
-    height: 75px;
-    width: 75px;
-    top: 89px;
-    right: -35px;}
+    height: 70px;
+    width: 70px;
+    top: 83px;
+    right: -18px;}
 .drop-4 {
     height: 75px;
     width: 75px;
@@ -156,7 +158,14 @@ table tr:nth-child(even) {background: rgba(197, 197, 197, 0.25);}
 @media screen and (max-width: 925px) { .drop-3 {top: 34%; right: -20px; z-index: -1;}}
 
 @media screen and (max-width: 775px) {
-    #insertar {bottom: -5.825%; font-size: 1.15rem;}
+    body {background: #000000;}
+
+    #insertar {
+        bottom: -5.825%; 
+        font-size: 1.15rem; 
+        background: rgba(255, 255, 255, 0.325);}
+
+    #insertar:hover {background-color: rgb(164, 231, 76, 0.3);}
 
     .drop-9 {bottom: -30px; left: 10px;}
 
@@ -211,5 +220,7 @@ table tr:nth-child(even) {background: rgba(197, 197, 197, 0.25);}
     table td:last-child {border-bottom: 0;}}
 
     @media screen and (max-width: 350px) { 
-        .drop-2 {z-index: -1;}
+        .drop-2 {z-index: -1; right: 22.5px;}
+
+        .drop-10 {left: 40%; width: 120px; height: 120px;}
     }

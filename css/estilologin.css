@@ -180,7 +180,7 @@ submit:focus {
 
 /* Media Queries */
 @media screen and (width < 605px) { 
-  form input[type=submit] {margin-top: 20px;}
+  form input[type=submit] {margin-top: 23px;}
   .drop-4 {display: none;}
   form {padding: 3em;}
 }

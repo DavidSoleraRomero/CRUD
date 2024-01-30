@@ -32,8 +32,8 @@ table tbody .fa-refresh:hover {color: rgb(236, 183, 83); transition: 0.5s ease-i
     position: absolute;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(3px);
-    bottom: -17.5%;
     left: 15px;
+    bottom: -17%;
     font-size: 1.75rem;
     font-family: texto1;
     border: 3px solid white;
@@ -161,9 +161,10 @@ table tr:nth-child(even) {background: rgba(197, 197, 197, 0.25);}
     body {background: #000000;}
 
     #insertar {
-        bottom: -5.825%; 
+        bottom: -6%; 
         font-size: 1.15rem; 
-        background: rgba(255, 255, 255, 0.325);}
+        background: rgba(255, 255, 255, 0.325);
+        margin-bottom: 12%;}
 
     #insertar:hover {background-color: rgb(164, 231, 76, 0.3);}
 
@@ -185,7 +186,7 @@ table tr:nth-child(even) {background: rgba(197, 197, 197, 0.25);}
 
     table tbody .fa {font-size: 1.5em;}
 
-    table {margin: 1em 0em; backdrop-filter: blur(2px);}
+    table {margin: 1em 0em; backdrop-filter: blur(2px); margin-bottom: 15%;}
 
     table caption {font-size: 1.65em;}
     

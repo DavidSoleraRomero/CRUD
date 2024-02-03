@@ -35,29 +35,22 @@ form {
   box-shadow: 2.5px 2.5px 100px rgba(0, 0, 0, 0.65);
   text-align: center;
   position: relative;
-  transition: all 0.2s ease-in-out;
-}
+  transition: all 0.2s ease-in-out;}
 form p {
   font-weight: bold;
   color: #fff;
   opacity: 0.8;
   font-size: 1.75rem;
   margin-top: 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);}
 form a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 12px;
-}
+  font-size: 12px;}
 label {color: #ffffff; margin-top: 0; padding-top: 0;}
-form a:hover {
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2509803922);
-}
-form a:active {
-  text-shadow: none;
-}
-form input {
+form a:hover {text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2509803922);}
+form a:active {text-shadow: none;}
+form input, #desplegable {
   background: transparent;
   width: 200px;
   padding: 1em;
@@ -72,38 +65,29 @@ form input {
   font-family: texto1;
   font-weight: 500;
   transition: all 0.4s ease-in-out;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);}
+#desplegable {margin-bottom: 0;}
 form input:hover {
   background: rgba(172, 172, 172, 0.25);
   border: 1px solid white;
-  box-shadow: 0px 0px 62.5px rgba(0, 0, 0, 0.775);
-}
+  box-shadow: 0px 0px 62.5px rgba(0, 0, 0, 0.775);}
 form input[type=username]:focus, form input[type=password]:focus {
   background: rgba(255, 255, 255, 0.1);
-  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.3);
-}
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.3);}
 form input[type=submit] {
   width: 150px;
-  font-size: 1.075rem;
-}
-form input[type=submit]:hover {
-  cursor: pointer;
-}
-form input[type=submit]:active {
-  background: rgba(255, 255, 255, 0.2);
-}
+  font-size: 1.075rem;}
+form input[type=submit]:hover {cursor: pointer;}
+form input[type=submit]:active {background: rgba(255, 255, 255, 0.2);}
 form:hover {
   margin: 8.5px;
-  transition: 0.8s;
-}
+  transition: 0.8s;}
 
 ::placeholder {
   font-family: Montserrat, sans-serif;
   font-weight: 400;
   color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-}
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);}
 
 /* Estilado de mini glasses ubicados alrededor del formulario */
 .drop {
@@ -176,6 +160,8 @@ textarea:focus,
 submit:focus {
   outline: none;
 }
+
+select, label {font-family: texto1;}
 
 /* Media Queries */
 @media screen and (width < 605px) { 

@@ -18,10 +18,21 @@
     <form>
     <p id="titulo">MODIFICACIÓN</p>
     <input type="text" name="username" placeholder="Usuario" value="davidsolera"><br>
-    <input type="password" name="password" placeholder="Contraseña" value="123456789"><br>
+    <div class="contrasenas">
+        <input type="password" name="password" placeholder="Password" value="123456789">
+        <input type="password" name="password" placeholder="Repeat password">
+    </div>
     <label for="date">Fecha de nacimiento</label><br>
     <input type="date" value="2005-12-23" name="date" id="date"><br>
-    <input type="text" name="comidafavorita" placeholder="Comida favorita" value="Espinacas"><br>
+    <div id="desplegable">
+        <label for="cars">Centro:</label>
+        <select name="cars" id="cars">
+            <option value="volvo">Ejemplo 1</option>
+            <option value="saab">Ejemplo 2</option>
+            <option value="mercedes">Ejemplo 3</option>
+            <option value="audi">Ejemplo 4</option>
+        </select>
+    </div>
     <input id="modificar" type="submit" value="MODIFICAR"><br>
     </form>
 

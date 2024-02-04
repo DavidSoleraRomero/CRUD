@@ -52,7 +52,7 @@ form a:hover {text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2509803922);}
 form a:active {text-shadow: none;}
 form input, #desplegable {
   background: transparent;
-  width: 200px;
+  width: 215px;
   padding: 1em;
   margin-bottom: 1.1em;
   border: none;
@@ -66,7 +66,9 @@ form input, #desplegable {
   font-weight: 500;
   transition: all 0.4s ease-in-out;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);}
+input[type=password] {width: 90px;}
 #desplegable {margin-bottom: 0;}
+select {cursor: pointer; border-radius: 10px;}
 form input:hover {
   background: rgba(172, 172, 172, 0.25);
   border: 1px solid white;
@@ -76,7 +78,8 @@ form input[type=username]:focus, form input[type=password]:focus {
   box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.3);}
 form input[type=submit] {
   width: 150px;
-  font-size: 1.075rem;}
+  font-size: 1.075rem;
+  margin-top: 15px;}
 form input[type=submit]:hover {cursor: pointer;}
 form input[type=submit]:active {background: rgba(255, 255, 255, 0.2);}
 form:hover {
@@ -97,61 +100,52 @@ form:hover {
   border: 0.5px solid rgba(255, 255, 255, 0.15);
   box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
   position: absolute;
-  transition: all 0.5s ease;
-}
+  transition: all 0.5s ease;}
 .drop-1 {
   height: 80px;
   width: 80px;
   top: -20px;
   left: -40px;
-  z-index: -1;
-}
+  z-index: -1;}
 .drop-2 {
   height: 75px;
   width: 75px;
   bottom: -30px;
-  right: -20px;
-}
+  right: -20px;}
 .drop-3 {
   height: 100px;
   width: 100px;
   bottom: 120px;
   right: -50px;
-  z-index: -1;
-}
+  z-index: -1;}
 .drop-4 {
   height: 105.5px;
   width: 105.5px;
   top: -45px;
-  right: -45px;
-}
+  right: -45px;}
 .drop-5 {
   height: 60px;
   width: 60px;
   bottom: 200px;
-  left: -35px;
-}
+  left: -35px;}
 .drop-6 {
   height: 97.5px;
   width: 100px;
   bottom: -35px;
   left: -35px;
-  z-index: -1;
-}
+  z-index: -1;}
 .drop-7 {
   height: 50px;
   width: 50px;
   bottom: -25px;
   left: 150px;
-  z-index: -1;
-}
+  z-index: -1;}
 .drop-8 {
   height: 90px;
   width: 90px;
   top: -50px;
   left: 150px;
-  z-index: -1;
-}
+  z-index: -1;}
 
 a,
 input:focus,

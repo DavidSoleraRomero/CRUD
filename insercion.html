@@ -16,13 +16,24 @@
     
 <div class="container">
     <form>
-    <p id="titulo">INSERTAR DATOS</p>
-    <input type="text" name="username" placeholder="Usuario"><br>
-    <input type="password" name="password" placeholder="Contraseña"><br>
-    <label for="date">Fecha de nacimiento</label><br>
-    <input type="date" name="date" id="date"><br>
-    <input type="text" name="comidafavorita" placeholder="Comida favorita"><br>
-    <input id="insertar" type="submit" value="INSERTAR"><br>
+        <p id="titulo">INSERTAR DATOS</p>
+        <input type="text" name="username" placeholder="Usuario"><br>
+        <div class="contrasenas">
+            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="password" placeholder="Repeat password">
+        </div>
+        <label for="date">Fecha de nacimiento</label><br>
+        <input type="date" name="date" id="date"><br>
+        <div id="desplegable">
+            <label for="cars">Centro:</label>
+            <select name="cars" id="cars">
+                <option value="volvo">Ejemplo 1</option>
+                <option value="saab">Ejemplo 2</option>
+                <option value="mercedes">Ejemplo 3</option>
+                <option value="audi">Ejemplo 4</option>
+            </select>
+        </div>
+        <input id="insertar" type="submit" value="INSERTAR"><br>
     </form>
 
     <div class="drops">

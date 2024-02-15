@@ -18,12 +18,15 @@
     <form>
         <p id="titulo">INSERTAR DATOS</p>
         <input type="text" name="username" placeholder="Usuario"><br>
+        <p class="mensajeHelp" id="userHelp">Introduce un usuario CORRECTO</p>
         <div class="contrasenas">
             <input type="password" name="password" placeholder="Password">
             <input type="password" name="password" placeholder="Repeat password">
         </div>
+        <p class="mensajeHelp" id="passwordHelp">Repita la contraseña VÁLIDA correctamente</p>
         <label for="date">Fecha de nacimiento</label><br>
         <input type="date" name="date" id="date"><br>
+        <p class="mensajeHelp" id="dateHelp">Debes elegir una fecha CORRECTA</p>
         <div id="desplegable">
             <label for="cars">Centro:</label>
             <select name="cars" id="cars">
@@ -33,6 +36,7 @@
                 <option value="audi">Ejemplo 4</option>
             </select>
         </div>
+        <p class="mensajeHelp" id="selectHelp">Es obligatorio seleccionar CENTRO</p>
         <input id="insertar" type="submit" value="INSERTAR"><br>
     </form>
 

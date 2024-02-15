@@ -41,7 +41,6 @@ form p {
   opacity: 0.8;
   font-size: 1.85rem;
   margin-top: 0;
-  margin-bottom: 35px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);}
 form a {
   text-decoration: none;
@@ -53,7 +52,7 @@ form input {
   background: transparent;
   width: 200px;
   padding: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
   border: none;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
   border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -74,7 +73,7 @@ form input[type=username]:focus, form input[type=password]:focus {
   box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.3);}
 form input[type=password], form input[type=username] {margin-top: 25px;}
 form input[type=submit] {
-  margin-top: 39px;
+  margin-top: 15px;
   width: 150px;
   font-size: 1.075rem;}
 form input[type=submit]:hover {cursor: pointer;}
@@ -88,6 +87,9 @@ form:hover {
   font-weight: 400;
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);}
+
+/* Estilo para errores de validación */
+.mensajeHelp {font-size: 12.5px !important; color:rgb(255, 114, 114); visibility: hidden;}
 
 /* Estilado de mini glasses ubicados alrededor del formulario */
 .drop {
@@ -156,7 +158,6 @@ select, label {font-family: texto1;}
 
 /* Media Queries */
 @media screen and (width < 605px) { 
-  form input[type=submit] {margin-top: 11.5px;}
   .drop-4 {display: none;}
   form {padding: 3em;}
 }

@@ -17,9 +17,9 @@
 <div class="container">
     <form action="" method="post" onsubmit="return validacion()">
         <p id="login">LOG IN</p>
-        <input type="text" name="username" name="username" placeholder="Usuario"><br>
-        <p class="mensajeHelp" id="userHelp" >Introduce un usuario CORRECTO</p>
-        <input type="password" name="password" placeholder="Contraseña" name="password"><br>
+        <input type="text" id="username" name="username" placeholder="Usuario" onchange="borraErrores('username')"><br>
+        <p class="mensajeHelp" id="usernameHelp" >Introduzca un usuario CORRECTO</p>
+        <input type="password" id="password" placeholder="Contraseña" name="password" onchange="borraErrores('password')"><br>
         <p class="mensajeHelp" id="passwordHelp">Introduzca una contraseña VÁLIDA</p>
         <input id="signin" type="submit" value="SIGN IN"><br>
     </form>

@@ -17,27 +17,27 @@
 <div class="container">
     <form action="" method="post" onsubmit="return validacion()">
         <p id="titulo">MODIFICACIÓN</p>
-        <input type="text" name="username" id="username" placeholder="Usuario" value="davidsolera"><br>
+        <input type="text" name="username" id="username" onchange="borraErrores('username')" placeholder="Usuario" value="davidsolera"><br>
         <p class="mensajeHelp" id="usernameHelp">Introduce un usuario CORRECTO</p>
         <div class="contrasenas">
-            <input type="password" name="passwordone" id="passwordone" placeholder="Password" value="123456789">
-            <input type="password" name="passwordtwo" id="passwordtwo" placeholder="Repeat password" value="123456789">
+            <input type="password" name="password" id="password" onchange="borraErrores('password')" placeholder="Password" value="dsrDSR1!">
+            <input type="password" name="passwordtwo" id="passwordtwo" onchange="borraErrores('passwordtwo')" placeholder="Repeat password" value="dsrDSR1!">
         </div>
-        <p class="mensajeHelp" id="passwordHelp">Repita la contraseña VÁLIDA correctamente</p>
+        <p class="mensajeHelp" id="passwordHelp">Por favor, REPITA contraseña correcta</p>
         <label for="date">Fecha de nacimiento</label><br>
-        <input type="date" value="2005-12-23" id="date" name="date" id="date"><br>
-        <p class="mensajeHelp" id="dateHelp">Debes elegir una fecha CORRECTA</p>
-        <div id="desplegable">
-            <label for="centro">Centro:</label>
-            <select name="centro" id="centro">
+        <input type="date" value="2005-12-23" onchange="borraErrores('date')" id="date" name="date" id="date"><br>
+        <p class="mensajeHelp" id="dateHelp">Debes elegir una FECHA</p>
+        <div id="centro">
+            <label for="centros">Centro:</label>
+            <select name="centros" onchange="borraErrores('centro')" id="centros">
                 <option value="0">Elige centro</option>
-                <option value="1">Alan Turing</option>
+                <option value="1" selected>Alan Turing</option>
                 <option value="2">IES Campanillas</option>
                 <option value="3">CEIP José Calderón</option>
                 <option value="4">Universidad Málaga</option>
             </select>
         </div>
-        <p class="mensajeHelp" id="selectHelp">Es obligatorio seleccionar CENTRO</p>
+        <p class="mensajeHelp" id="centroHelp">Es obligatorio seleccionar CENTRO</p>
         <input id="modificar" type="submit" value="MODIFICAR"><br>
     </form>
 

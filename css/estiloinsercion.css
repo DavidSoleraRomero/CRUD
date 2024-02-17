@@ -50,7 +50,7 @@ form a {
 label {color: #ffffff; margin-top: 0; padding-top: 0;}
 form a:hover {text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2509803922);}
 form a:active {text-shadow: none;}
-form input, #desplegable {
+form input, #centro {
   background: transparent;
   width: 215px;
   padding: 1em;
@@ -67,8 +67,8 @@ form input, #desplegable {
   transition: all 0.4s ease-in-out;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);}
 input[type=password] {width: 90px;}
-#desplegable {margin-bottom: 0;}
-select {cursor: pointer; border-radius: 10px;}
+#centro {margin-bottom: 0;}
+select {cursor: pointer; border-radius: 5px;}
 form input:hover {
   background: rgba(172, 172, 172, 0.25);
   border: 1px solid white;
@@ -78,19 +78,18 @@ form input[type=username]:focus, form input[type=password]:focus {
   box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.3);}
 form input[type=submit] {
   width: 150px;
-  font-size: 1.075rem;
-  margin-top: 15px;}
+  font-size: 1.075rem;}
 form input[type=submit]:hover {cursor: pointer;}
 form input[type=submit]:active {background: rgba(255, 255, 255, 0.2);}
 form:hover {
   margin: 8.5px;
   transition: 0.8s;}
 .form-novalidado {
-    border: 1px solid rgb(255, 0, 0);
-    background-color: rgb(63, 0, 0, 0.25);
-}
+    border: 1px solid rgb(255, 0, 0) !important;
+    background-color: rgb(63, 0, 0, 0.25) !important;}
 .form-novalidado:hover {border: 1px solid rgb(137, 0, 0);background-color: rgb(63, 0, 0, 0.65) !important;}
 .form-novalidado:focus {background-color: rgb(63, 0, 0, 0.50) !important;}
+#centroHelp {padding-top: 2.6px;}
 
 ::placeholder {
   font-family: Montserrat, sans-serif;
@@ -99,7 +98,7 @@ form:hover {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);}
 
 /* Estilo para errores de validación */
-.mensajeHelp {font-size: 11px !important; color:rgb(255, 113, 113); visibility: hidden;}
+.mensajeHelp {font-size: 10.7px !important; color:rgb(255, 113, 113); visibility: hidden;}
 #selectHelp {font-size: 9.5px !important;}
 
 /* Estilado de mini glasses ubicados alrededor del formulario */
@@ -169,7 +168,6 @@ select, label {font-family: texto1;}
 
 /* Media Queries */
 @media screen and (width < 605px) { 
-  form input[type=submit] {margin-top: 17.5px;}
   .drop-4 {display: none;}
   form {padding: 3em; padding-top: 1em; padding-bottom: 11em;}
 }

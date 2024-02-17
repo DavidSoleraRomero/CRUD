@@ -15,25 +15,26 @@
 <body>
     
 <div class="container">
-    <form>
+    <form action="" method="post" onsubmit="return validacion()">
         <p id="titulo">INSERTAR DATOS</p>
-        <input type="text" name="username" placeholder="Usuario"><br>
-        <p class="mensajeHelp" id="userHelp">Introduce un usuario CORRECTO</p>
+        <input type="text" name="username" id="username" placeholder="Usuario"><br>
+        <p class="mensajeHelp" id="usernameHelp">Introduce un usuario CORRECTO</p>
         <div class="contrasenas">
-            <input type="password" name="password" placeholder="Password">
-            <input type="password" name="password" placeholder="Repeat password">
+            <input type="password" name="passwordone" id="passwordone" placeholder="Password">
+            <input type="password" name="passwordtwo" id="passwordtwo" placeholder="Repeat password">
         </div>
         <p class="mensajeHelp" id="passwordHelp">Repita la contraseña VÁLIDA correctamente</p>
         <label for="date">Fecha de nacimiento</label><br>
-        <input type="date" name="date" id="date"><br>
+        <input type="date" id="date" name="date" id="date"><br>
         <p class="mensajeHelp" id="dateHelp">Debes elegir una fecha CORRECTA</p>
         <div id="desplegable">
-            <label for="cars">Centro:</label>
-            <select name="cars" id="cars">
-                <option value="volvo">Ejemplo 1</option>
-                <option value="saab">Ejemplo 2</option>
-                <option value="mercedes">Ejemplo 3</option>
-                <option value="audi">Ejemplo 4</option>
+            <label for="centro">Centro:</label>
+            <select name="centro" id="centro">
+                <option value="0">Elige centro</option>
+                <option value="1">Alan Turing</option>
+                <option value="2">IES Campanillas</option>
+                <option value="3">CEIP José Calderón</option>
+                <option value="4">Universidad Málaga</option>
             </select>
         </div>
         <p class="mensajeHelp" id="selectHelp">Es obligatorio seleccionar CENTRO</p>
@@ -51,6 +52,8 @@
     <div class="drop drop-8"></div>
     </div>
 </div>
+
+<script src="./js/validacioninsmod.js"></script>
 
 </body>
 </html>

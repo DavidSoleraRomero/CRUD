@@ -85,6 +85,12 @@ form input[type=submit]:active {background: rgba(255, 255, 255, 0.2);}
 form:hover {
   margin: 8.5px;
   transition: 0.8s;}
+.form-novalidado {
+    border: 1px solid rgb(255, 0, 0);
+    background-color: rgb(63, 0, 0, 0.25);
+}
+.form-novalidado:hover {border: 1px solid rgb(137, 0, 0);background-color: rgb(63, 0, 0, 0.65) !important;}
+.form-novalidado:focus {background-color: rgb(63, 0, 0, 0.50) !important;}
 
 ::placeholder {
   font-family: Montserrat, sans-serif;

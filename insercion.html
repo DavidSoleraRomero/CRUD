@@ -24,12 +24,11 @@
             <input type="password" name="passwordtwo" onchange="borraErrores('passwordtwo')" id="passwordtwo" placeholder="Repeat password">
         </div>
         <p class="mensajeHelp" id="passwordHelp">Por favor, REPITA contraseña correcta</p>
-        <label for="date">Fecha de nacimiento</label><br>
-        <input type="date" id="date" onchange="borraErrores('date')" name="date" id="date"><br>
-        <p class="mensajeHelp" id="dateHelp">Debes elegir una FECHA</p>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre real"><br>
+        <p class="mensajeHelp" id="nombreHelp">Debe INTRODUCIR su nombre</p>
         <div id="centro">
             <label for="centros">Centro:</label>
-            <select name="centros" onchange="borraErrores('centro')" id="centros">
+            <select name="centros" onchange="borraErrores('centros')" id="centros">
                 <option value="0" selected>Elige centro</option>
                 <option value="1">Alan Turing</option>
                 <option value="2">IES Campanillas</option>
@@ -37,7 +36,26 @@
                 <option value="4">Universidad Málaga</option>
             </select>
         </div>
-        <p class="mensajeHelp" id="centroHelp">Es obligatorio seleccionar CENTRO</p>
+        <p class="mensajeHelp" id="centroHelp">Es OBLIGATORIO seleccionar CENTRO</p>
+        <input type="text" name="email" id="email" placeholder="Correo electrónico"><br>
+        <p class="mensajeHelp" id="emailHelp">Debe introducir un email VÁLIDO</p>
+        <input type="text" id="dni" onchange="borraErrores('dni')" name="dni" placeholder="DNI">
+        <input type="number" id="eficiencia" name="eficiencia" min="1" max="10" placeholder="Eficiencia">
+        <div class="agrupacion">
+            <p class="mensajeHelp" id="dniHelp">DNI inválido</p>
+            <p class="mensajeHelp" id="eficienciaHelp">Eficiencia (1-10)</p>
+        </div>
+
+        <input type="radio" id="hombre" name="gender" value="Hombre">
+        <label for="html">Hombre</label>
+        <input type="radio" id="mujer" name="gender" value="Mujer">
+        <label for="css">Mujer</label>
+        <input type="radio" id="otro" name="gender" value="Otro">
+        <label for="javascript">Otro</label><br>
+        <p class="mensajeHelp" id="genderHelp">DEBE ELEGIR un género</p>
+        <input type="checkbox" id="notificaciones" name="notificaciones" value="Notificaciones">
+        <label for="notificaciones" >Acepto recibir notificaciones</label><br>
+        <p class="mensajeHelp" id="notificacionesHelp">DEBE ACEPTAR las notificaciones</p>
         <input id="insertar" type="submit" value="INSERTAR"><br>
     </form>
 

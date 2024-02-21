@@ -1,73 +1,75 @@
 /* JavaScript de validaciones para modificacion.html / insert.html */
 
+function muestraError(id) {
+    document.getElementById(id).classList.add("form-novalidado");
+    document.getElementById(id + "Help").style.visibility="visible";
+}
+
+function borraErrores(id) {
+    document.getElementById(id).classList.remove("form-novalidado");
+    document.getElementById(id + "Help").style.visibility="hidden";
+}
+
 function validaNombre() {
     let nombre = document.getElementById("username");
-    let userHelp = document.getElementById("usernameHelp");
     if (nombre.value == "" | nombre.value == null 
-    | nombre.value.replace(/\s/g, "") == "" | ! /[a-zA-Z0-9]{2,}/.test(nombre.value)) {
-        userHelp.style.visibility="visible";
-        nombre.classList.add("form-novalidado");
+    | nombre.value.replace(/\s/g, "") == "" | ! /[a-zA-Z0-9]{5,}/.test(nombre.value)) {
+        muestraError("username");
         return false;
     }
-    nombre.classList.remove("form-novalidado");
-    userHelp.style.visibility="hidden";
+    borraErrores("username");
     return true;
 }
 
 function validaPasswords() {
     let password = document.getElementById("password");
     let passwordtwo = document.getElementById("passwordtwo");
-    let passwordHelp = document.getElementById("passwordHelp");
     const patron = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
     if (password.value == "" | password.value == null 
     | password.value.replace(/\s/g, "") == "" | ! patron.test(password.value)
     | passwordtwo.value != password.value) {
-        passwordHelp.style.visibility="visible";
-        password.classList.add("form-novalidado");
+        muestraError("password");
         passwordtwo.classList.add("form-novalidado");
         return false;
     }
-    password.classList.remove("form-novalidado");
+    borraErrores("password");
     passwordtwo.classList.remove("form-novalidado");
-    passwordHelp.style.visibility="hidden";
     return true;
 }
 
 function validaCentro() {
     let centro = document.getElementById("centros");
-    let centroHelp = document.getElementById("centroHelp");
     if (centro.value == 0) {
-        centroHelp.style.visibility="visible";
-        document.getElementById("centro").classList.add("form-novalidado");
+        muestraError("centro");
         return false;
     }
-    document.getElementById("centro").classList.remove("form-novalidado");
-    centroHelp.style.visibility="hidden";
+    borraErrores("centro");
     return true;
 }
 
-function validaFecha() {
-    let date = document.getElementById("date");
-    let dateHelp = document.getElementById("dateHelp");
-    if (date.value == "" | date.value == null) {
-        date.classList.add("form-novalidado");
-        dateHelp.style.visibility="visible";
+function validaDNI() {
+    let dni = document.getElementById("dni");
+    if (dni.value == "" | dni.value == null) {
+        muestraError("dni");
         return false;
     }
-    date.classList.remove("form-novalidado");
-    dateHelp.style.visibility="hidden";
+    borraErrores("dni");
+    return true;
+}
+
+function validaEmail() {
+    let email = document.getElementById("email");
+        muestraError("email");
+        return false;
+    borraErrores("email");
     return true;
 }
 
 function validacion() {
-    if (validaNombre() & validaPasswords() & validaCentro() & validaFecha()) {
+    if (validaNombre() & validaPasswords() & validaCentro() & validaDNI() & validaEmail()) {
         return true;
     } else {
         return false;
     }
 }
 
-function borraErrores(id) {
-    document.getElementById(id).classList.remove("form-novalidado");
-    document.getElementById(id + "Help").style.visibility="hidden"
-}

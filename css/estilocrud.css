@@ -154,8 +154,8 @@ table tr:nth-child(even) {background: rgba(197, 197, 197, 0.25);}
     
 /* Media Queries */
 @media screen and (max-width: 1385px) {.drop-1 {left: -32.5px; z-index: -1;}}
-@media screen and (max-width: 925px) { .drop-3 {top: 34%; right: -20px; z-index: -1;}}
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 980px) { .drop-3 {top: 34%; right: -20px; z-index: -1;}}
+@media screen and (max-width: 930px) {
     body {background: #000000;}
 
     #insertar {

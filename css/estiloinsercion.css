@@ -28,7 +28,7 @@ body {
 form {
   background: rgba(80, 80, 80, 0.18);
   padding: 1em 5.75em 11em 5.75em;
-  height: 350px;
+  height: 600px;
   border-radius: 15px;
   border: 2px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(9px);
@@ -66,7 +66,8 @@ form input, #centro {
   font-weight: 500;
   transition: all 0.4s ease-in-out;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);}
-input[type=password] {width: 90px;}
+input[type=radio], input[type=checkbox] {width: 15px;}
+input[type=password], input[type=number], #dni {width: 90px; }
 #centro {margin-bottom: 0;}
 select {cursor: pointer; border-radius: 5px;}
 form input:hover {
@@ -100,6 +101,13 @@ form:hover {
 /* Estilo para errores de validación */
 .mensajeHelp {font-size: 10.7px !important; color:rgb(255, 113, 113); visibility: hidden;}
 #selectHelp {font-size: 9.5px !important;}
+
+/* Grid de 3 para radio buttons */
+.agrupacion {
+  display: flex; 
+  justify-content: space-around;}
+  
+.agrupacion p {width: 90px;}
 
 /* Estilado de mini glasses ubicados alrededor del formulario */
 .drop {

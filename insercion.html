@@ -24,11 +24,11 @@
             <input type="password" name="passwordtwo" onchange="borraErrores('passwordtwo')" id="passwordtwo" placeholder="Repeat password">
         </div>
         <p class="mensajeHelp" id="passwordHelp">Por favor, REPITA contraseña correcta</p>
-        <input type="text" name="nombre" id="nombre" placeholder="Nombre real"><br>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre real" onchange="borraErrores('nombre')"><br>
         <p class="mensajeHelp" id="nombreHelp">Debe INTRODUCIR su nombre</p>
         <div id="centro">
             <label for="centros">Centro:</label>
-            <select name="centros" onchange="borraErrores('centros')" id="centros">
+            <select name="centros" onchange="borraErrores('centro')" id="centros">
                 <option value="0" selected>Elige centro</option>
                 <option value="1">Alan Turing</option>
                 <option value="2">IES Campanillas</option>
@@ -37,7 +37,7 @@
             </select>
         </div>
         <p class="mensajeHelp" id="centroHelp">Es OBLIGATORIO seleccionar CENTRO</p>
-        <input type="text" name="email" id="email" placeholder="Correo electrónico"><br>
+        <input type="text" name="email" id="email" placeholder="Correo electrónico" onchange="borraErrores('email')"><br>
         <p class="mensajeHelp" id="emailHelp">Debe introducir un email VÁLIDO</p>
         <input type="text" id="dni" onchange="borraErrores('dni')" name="dni" placeholder="DNI">
         <input type="number" id="eficiencia" name="eficiencia" min="1" max="10" placeholder="Eficiencia">

@@ -10,7 +10,7 @@ function borraErrores(id) {
     document.getElementById(id + "Help").style.visibility="hidden";
 }
 
-function validaNombre() {
+function validaUsername() {
     let nombre = document.getElementById("username");
     if (nombre.value == "" | nombre.value == null 
     | nombre.value.replace(/\s/g, "") == "" | ! /[a-zA-Z0-9]{5,}/.test(nombre.value)) {
@@ -49,7 +49,7 @@ function validaCentro() {
 
 function validaDNI() {
     let dni = document.getElementById("dni");
-    if (dni.value == "" | dni.value == null) {
+    if (!/^[A-Za-z]{6,7}\d$/.test(dni.value)) {
         muestraError("dni");
         return false;
     }
@@ -59,14 +59,52 @@ function validaDNI() {
 
 function validaEmail() {
     let email = document.getElementById("email");
+    let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,7}$/;
+    if (!regex.test(email.value)) {
         muestraError("email");
         return false;
+    }
     borraErrores("email");
     return true;
 }
 
+function validaEficiencia() {
+    let eficiencia = document.getElementById("eficiencia");
+    if (eficiencia.value.trim == "" || eficiencia.value < 1 || eficiencia.value > 10) {
+        muestraError("eficiencia");
+        return false;
+    }
+    borraErrores("eficiencia");
+    return true;
+}
+
+function validaCheck() {
+    let check = document.getElementById("notificaciones");
+    if (!check.checked) {
+        muestraError("notificaciones");
+        return false;
+    }
+    borraErrores("notificaciones");
+    return true;
+}
+
+function validaRadio() {
+
+}
+
+function validaNombreReal() {
+    let nombreReal = document.getElementById("nombre");
+    if (nombreReal.value.trim() == "") {
+        muestraError("nombre");
+        return false;
+    }
+    borraErrores("nombre");
+    return true;
+}
+
 function validacion() {
-    if (validaNombre() & validaPasswords() & validaCentro() & validaDNI() & validaEmail()) {
+    if (validaUsername() & validaPasswords() & validaCentro() & validaDNI() & validaEmail() & validaEficiencia()
+    & validaCheck() & validaRadio() & validaNombreReal()) {
         return true;
     } else {
         return false;

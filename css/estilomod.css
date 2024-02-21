@@ -50,7 +50,7 @@ form a {
 label {color: #ffffff; margin-top: 0; padding-top: 0;}
 form a:hover {text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2509803922);}
 form a:active {text-shadow: none;}
-form input, #centros {
+form input, #centro {
   background: transparent;
   width: 215px;
   padding: 1em;
@@ -66,7 +66,7 @@ form input, #centros {
   font-weight: 500;
   transition: all 0.4s ease-in-out;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);}
-#centros {margin-bottom: 0;}
+#centro {margin-bottom: 0;}
 input[type=password] {width: 90px;}
 select {cursor: pointer; border-radius: 5px;}
 form input:hover {

@@ -1,23 +1,30 @@
 /* JavaScript de validaciones para modificacion.html / insert.html */
 
-function muestraError(id) {
-    document.getElementById(id).classList.add("form-novalidado");
+function anadirClaseError(id, clase) {
+    document.getElementById(id).classList.add(clase);
     document.getElementById(id + "Help").style.visibility="visible";
 }
 
-function borraErrores(id) {
-    document.getElementById(id).classList.remove("form-novalidado");
+function eliminarClaseError(id, clase) {
+    document.getElementById(id).classList.remove(clase);
+    document.getElementById(id + "Help").style.visibility="hidden";
+}
+
+function muestraError(id) {
+    document.getElementById(id + "Help").style.visibility="visible";
+}
+
+function ocultaError(id) {
     document.getElementById(id + "Help").style.visibility="hidden";
 }
 
 function validaUsername() {
     let nombre = document.getElementById("username");
-    if (nombre.value == "" | nombre.value == null 
-    | nombre.value.replace(/\s/g, "") == "" | ! /[a-zA-Z0-9]{5,}/.test(nombre.value)) {
-        muestraError("username");
+    if (! /[a-zA-Z0-9]{5,}/.test(nombre.value)) {
+        anadirClaseError("username", "form-novalidado");
         return false;
     }
-    borraErrores("username");
+    eliminarClaseError("username", "form-novalidado");
     return true;
 }
 
@@ -28,11 +35,11 @@ function validaPasswords() {
     if (password.value == "" | password.value == null 
     | password.value.replace(/\s/g, "") == "" | ! patron.test(password.value)
     | passwordtwo.value != password.value) {
-        muestraError("password");
+        anadirClaseError("password");
         passwordtwo.classList.add("form-novalidado");
         return false;
     }
-    borraErrores("password");
+    eliminarClaseError("password");
     passwordtwo.classList.remove("form-novalidado");
     return true;
 }
@@ -40,20 +47,20 @@ function validaPasswords() {
 function validaCentro() {
     let centro = document.getElementById("centros");
     if (centro.value == 0) {
-        muestraError("centro");
+        anadirClaseError("centro", "form-novalidado");
         return false;
     }
-    borraErrores("centro");
+    eliminarClaseError("centro", "form-novalidado");
     return true;
 }
 
 function validaDNI() {
     let dni = document.getElementById("dni");
-    if (!/^[A-Za-z]{6,7}\d$/.test(dni.value)) {
-        muestraError("dni");
+    if (!/^[0-9]{7,8}[A-Z]$/.test(dni.value)) {
+        anadirClaseError("dni", "form-novalidado");
         return false;
     }
-    borraErrores("dni");
+    eliminarClaseError("dni", "form-novalidado");
     return true;
 }
 
@@ -61,49 +68,62 @@ function validaEmail() {
     let email = document.getElementById("email");
     let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,7}$/;
     if (!regex.test(email.value)) {
-        muestraError("email");
+        anadirClaseError("email", "form-novalidado");
         return false;
     }
-    borraErrores("email");
+    eliminarClaseError("email", "form-novalidado");
     return true;
 }
 
 function validaEficiencia() {
     let eficiencia = document.getElementById("eficiencia");
     if (eficiencia.value.trim == "" || eficiencia.value < 1 || eficiencia.value > 10) {
-        muestraError("eficiencia");
+        anadirClaseError("eficiencia", "form-novalidado");
         return false;
     }
-    borraErrores("eficiencia");
+    eliminarClaseError("eficiencia", "form-novalidado");
     return true;
 }
 
 function validaCheck() {
     let check = document.getElementById("notificaciones");
     if (!check.checked) {
-        muestraError("notificaciones");
+        anadirClaseError("notificaciones", "errorCheckbox");
         return false;
     }
-    borraErrores("notificaciones");
+    eliminarClaseError("notificaciones", "errorCheckbox");
     return true;
 }
 
 function validaRadio() {
-
+    let genders = document.getElementsByName("gender");
+    let seleccionado = false;
+    for (let i = 0; i < genders.length; i++) {
+        if (genders[i].checked) {
+            seleccionado = true;
+            break;
+        }
+    }
+    if (seleccionado == false) {
+        muestraError('gender');
+        return false;
+    }
+    ocultaError('gender');
+    return true;
 }
 
 function validaNombreReal() {
     let nombreReal = document.getElementById("nombre");
     if (nombreReal.value.trim() == "") {
-        muestraError("nombre");
+        anadirClaseError("nombre", "form-novalidado");
         return false;
     }
-    borraErrores("nombre");
+    eliminarClaseError("nombre", "form-novalidado");
     return true;
 }
 
 function validacion() {
-    if (validaUsername() & validaPasswords() & validaCentro() & validaDNI() & validaEmail() & validaEficiencia()
+    if (validaUsername() & validaCentro() & validaDNI() & validaEmail() & validaEficiencia()
     & validaCheck() & validaRadio() & validaNombreReal()) {
         return true;
     } else {

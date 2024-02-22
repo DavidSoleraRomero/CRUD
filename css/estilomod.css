@@ -6,8 +6,9 @@
   src: url("../fonts/hadijah-free-trial.ttf");
 }
 
-/* Fuentes de textos Titulo y Label */
+/* Fuentes de textos Titulo, Select y Label */
 #titulo, label {font-family: texto1;}
+select {font-family: texto1;}
 
 /* Estilado general */
 body {
@@ -27,8 +28,7 @@ body {
 /* Estilo del formulario */
 form {
   background: rgba(80, 80, 80, 0.18);
-  padding: 1em 5.75em 11em 5.75em;
-  height: 350px;
+  padding: 1em 4.5em;
   border-radius: 15px;
   border: 2px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(9px);
@@ -36,6 +36,9 @@ form {
   text-align: center;
   position: relative;
   transition: all 0.2s ease-in-out;}
+
+#centro {margin: auto;}
+
 form p {
   font-weight: bold;
   color: #fff;
@@ -43,18 +46,23 @@ form p {
   font-size: 1.75rem;
   margin-top: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);}
+
 form a {
   text-decoration: none;
   color: #ffffff;
   font-size: 12px;}
+
 label {color: #ffffff; margin-top: 0; padding-top: 0;}
+
 form a:hover {text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2509803922);}
+
 form a:active {text-shadow: none;}
+
 form input, #centro {
   background: transparent;
-  width: 215px;
-  padding: 1em;
-  margin-bottom: 0.25em;
+  width: 190px;
+  padding: 0.75em;
+  margin-bottom: 0.24rem;
   border: none;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
   border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -66,29 +74,35 @@ form input, #centro {
   font-weight: 500;
   transition: all 0.4s ease-in-out;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);}
+
+input[type=radio], input[type=checkbox] {padding:0;width: 15px; accent-color: rgb(80, 141, 66);}
+
+input[type=number], #dni {width: 82px;}
+
 #centro {margin-bottom: 0;}
-input[type=password] {width: 90px;}
+
 select {cursor: pointer; border-radius: 5px;}
+
 form input:hover {
   background: rgba(172, 172, 172, 0.25);
   border: 1px solid white;
   box-shadow: 0px 0px 62.5px rgba(0, 0, 0, 0.775);}
-form input[type=username]:focus, form input[type=password]:focus {
+
+form input[type=username]:focus {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.3);}
+
 form input[type=submit] {
   width: 150px;
   font-size: 1.075rem;}
+
 form input[type=submit]:hover {cursor: pointer;}
+
 form input[type=submit]:active {background: rgba(255, 255, 255, 0.2);}
+
 form:hover {
   margin: 8.5px;
   transition: 0.8s;}
-.form-novalidado {
-    border: 1px solid rgb(255, 0, 0) !important;
-    background-color: rgb(63, 0, 0, 0.25) !important;}
-.form-novalidado:hover {border: 1px solid rgb(137, 0, 0);background-color: rgb(63, 0, 0, 0.65) !important;}
-.form-novalidado:focus {background-color: rgb(63, 0, 0, 0.50) !important;}
 
 ::placeholder {
   font-family: Montserrat, sans-serif;
@@ -96,9 +110,33 @@ form:hover {
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);}
 
-/* Estilo para errores de validación */
-.mensajeHelp {font-size: 11px !important; color:rgb(255, 113, 113); visibility: hidden;}
+.genero {font-size: 16px;}
+
+/* Estilo para validación incorrecta */
+.form-novalidado {
+    border: 1px solid rgb(255, 0, 0) !important;
+    background-color: rgb(63, 0, 0, 0.25) !important;}
+
+.errorCheckbox {box-shadow: 0px 0px 10px 1.25px red;}
+
+.form-novalidado:hover {
+  border: 1px solid rgb(137, 0, 0);
+  background-color: rgb(63, 0, 0, 0.65) !important;}
+
+.form-novalidado:focus {background-color: rgb(63, 0, 0, 0.50) !important;}
+
+#centroHelp {padding-top: 2.6px;}
+
+.mensajeHelp {font-size: 10.7px !important; color:rgb(255, 113, 113); visibility: hidden;}
+
 #selectHelp {font-size: 9.5px !important;}
+
+/* Grid de 3 para radio buttons */
+.agrupacion {
+  display: flex; 
+  justify-content: space-around;}
+
+.agrupacion p {width: 90px;}
 
 /* Estilado de mini glasses ubicados alrededor del formulario */
 .drop {
@@ -108,89 +146,85 @@ form:hover {
   border: 0.5px solid rgba(255, 255, 255, 0.15);
   box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
   position: absolute;
-  transition: all 0.5s ease;
-}
+  transition: all 0.5s ease;}
 .drop-1 {
   height: 80px;
   width: 80px;
   top: -20px;
   left: -40px;
-  z-index: -1;
-}
+  z-index: -1;}
 .drop-2 {
   height: 75px;
   width: 75px;
   bottom: -30px;
-  right: -20px;
-}
+  right: -20px;}
 .drop-3 {
   height: 100px;
   width: 100px;
   bottom: 120px;
   right: -50px;
-  z-index: -1;
-}
+  z-index: -1;}
 .drop-4 {
   height: 105.5px;
   width: 105.5px;
   top: -45px;
-  right: -45px;
-}
+  right: -45px;}
 .drop-5 {
   height: 60px;
   width: 60px;
   bottom: 200px;
-  left: -35px;
-}
+  left: -35px;}
 .drop-6 {
   height: 97.5px;
   width: 100px;
   bottom: -35px;
   left: -35px;
-  z-index: -1;
-}
+  z-index: -1;}
 .drop-7 {
   height: 50px;
   width: 50px;
   bottom: -25px;
   left: 150px;
-  z-index: -1;
-}
+  z-index: -1;}
 .drop-8 {
   height: 90px;
   width: 90px;
   top: -50px;
   left: 150px;
-  z-index: -1;
-}
+  z-index: -1;}
 
 a,
 input:focus,
 select:focus,
 textarea:focus,
-submit:focus {
-  outline: none;
-}
+submit:focus {outline: none;}
 
-select, label {font-family: texto1;}
+/* Media Queries para el ancho */
+@media screen and (width < 905px) {.genero {font-size: 14px;}}
 
-/* Media Queries */
-@media screen and (width < 605px) { 
-  .drop-4 {display: none;}
-  form {padding: 3em; padding-top: 1em; padding-bottom: 11em;}
-}
+@media screen and (width < 605px) {.drop-4 {display: none;}}
 
 @media screen and (width < 465px) {
   #modificar {margin-top: 5px}
-  .drop-3 {display: none;}
-  form {padding: 2.5em;  padding-top: 1em; padding-bottom: 11em;}
-}
+  .drop-3 {display: none;}}
 
 @media screen and (width < 415px) {
     .drop-3, .drop-2 {display: none;}
-    form {padding: 1.625em; padding-top: 1em; padding-bottom: 11em;}
     .drop-1, .drop-5, .drop-6 {display: none;}
-    .drop-7 {width: 75px; height: 75px; bottom: -50px; left: 45px}
-}
+    .drop-7 {width: 75px; height: 75px; bottom: -50px; left: 45px}}
+
+/* Media Queries para el alto */
+@media screen and (height < 740px) { 
+  .genero {font-size: 12.8px;}
+  body {background: #141414;}
+  form input, #centro { 
+    padding: 0.6em;
+    margin-bottom: 0.075em;}
+  form {padding: 0.425em 4.5em;}}
+@media screen and (height < 692.5px) { 
+    .drop-1, .drop-8, .drop-4 {display: none;}
+    form {margin-top: 20%;}}
+@media screen and (height < 610px) {form {margin-top: 36.5%;}}
+@media screen and (height <= 520px) {form {margin-top: 45%;}}
 
 /*# sourceMappingURL=estilo.css.map */

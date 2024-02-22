@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./img/favicon2.png" type="image/x-icon">
-    <title>Modificacion de datos</title>
+    <title>Modificar datos</title>
     <!-- ESTA WEB HA SIDO REALIZADA POR DAVID SOLERA ROMERO 
     HACIENDO USO DE PLANTILLAS DE INTERNET Y MODIFICÁNDOLAS.
     CUALQUIER TRABAJO IGUAL EN LA WEB NO HA SIDO CONSENTIDO -->
@@ -17,19 +17,13 @@
 <div class="container">
     <form action="" method="post" onsubmit="return validacion()">
         <p id="titulo">MODIFICACIÓN</p>
-        <input type="text" name="username" id="username" onchange="borraErrores('username')" placeholder="Usuario" value="davidsolera"><br>
+        <input type="text" name="username" id="username" value="dsolera" onchange="eliminarClaseError('username','form-novalidado')" placeholder="Usuario"><br>
         <p class="mensajeHelp" id="usernameHelp">Introduce un usuario CORRECTO</p>
-        <div class="contrasenas">
-            <input type="password" name="password" id="password" onchange="borraErrores('password')" placeholder="Password" value="dsrDSR1!">
-            <input type="password" name="passwordtwo" id="passwordtwo" onchange="borraErrores('passwordtwo')" placeholder="Repeat password" value="dsrDSR1!">
-        </div>
-        <p class="mensajeHelp" id="passwordHelp">Por favor, REPITA contraseña correcta</p>
-        <label for="date">Fecha de nacimiento</label><br>
-        <input type="date" value="2005-12-23" onchange="borraErrores('date')" id="date" name="date" id="date"><br>
-        <p class="mensajeHelp" id="dateHelp">Debes elegir una FECHA</p>
+        <input type="text" name="nombre" id="nombre" value="David" placeholder="Nombre real" onchange="eliminarClaseError('nombre','form-novalidado')"><br>
+        <p class="mensajeHelp" id="nombreHelp">Debe INTRODUCIR su nombre</p>
         <div id="centro">
             <label for="centros">Centro:</label>
-            <select name="centros" onchange="borraErrores('centro')" id="centros">
+            <select name="centros" onchange="eliminarClaseError('centro','form-novalidado')" id="centros">
                 <option value="0">Elige centro</option>
                 <option value="1" selected>Alan Turing</option>
                 <option value="2">IES Campanillas</option>
@@ -37,7 +31,27 @@
                 <option value="4">Universidad Málaga</option>
             </select>
         </div>
-        <p class="mensajeHelp" id="centroHelp">Es obligatorio seleccionar CENTRO</p>
+        <p class="mensajeHelp" id="centroHelp">Es OBLIGATORIO seleccionar CENTRO</p>
+        <input type="text" name="email" id="email" value="davidsoleraromero@gmail.com" placeholder="Correo electrónico" onchange="eliminarClaseError('email','form-novalidado')"><br>
+        <p class="mensajeHelp" id="emailHelp">Debe introducir un email VÁLIDO</p>
+        <input type="text" id="dni" value="77504257A" onchange="eliminarClaseError('dni', 'form-novalidado')" name="dni" placeholder="DNI">
+        <input type="number" id="eficiencia" name="eficiencia" min="1" max="10" value="9" placeholder="Eficiencia">
+        <div class="agrupacion">
+            <p class="mensajeHelp" id="dniHelp">DNI inválido</p>
+            <p class="mensajeHelp" id="eficienciaHelp">Eficiencia (1-10)</p>
+        </div>
+        <div onclick="ocultaError('gender')">
+            <input type="radio" id="hombre" name="gender" value="Hombre" checked>
+            <label class="genero" for="hombre">Hombre</label>
+            <input type="radio" id="mujer" name="gender" value="Mujer">
+            <label class="genero" for="mujer">Mujer</label>
+            <input type="radio" id="otro" name="gender" value="Otro">
+            <label class="genero" for="otro">Otro</label><br>
+        <p class="mensajeHelp" id="genderHelp">DEBE ELEGIR un género</p>
+        </div>
+        <input type="checkbox" checked onchange="eliminarClaseError('notificaciones', 'errorCheckbox')" id="notificaciones" name="notificaciones" value="Notificaciones">
+        <label for="notificaciones">Acepto recibir notificaciones</label><br>
+        <p class="mensajeHelp" id="notificacionesHelp">DEBE ACEPTAR las notificaciones</p>
         <input id="modificar" type="submit" value="MODIFICAR"><br>
     </form>
 

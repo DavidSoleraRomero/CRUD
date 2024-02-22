@@ -215,6 +215,7 @@ submit:focus {outline: none;}
 
 /* Media Queries para el alto */
 @media screen and (height < 740px) { 
+  form:hover {margin: 0;}
   .genero {font-size: 12.8px;}
   body {background: #141414;}
   form input, #centro { 

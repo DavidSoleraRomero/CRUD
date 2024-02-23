@@ -100,10 +100,6 @@ form input[type=submit]:hover {cursor: pointer;}
 
 form input[type=submit]:active {background: rgba(255, 255, 255, 0.2);}
 
-form:hover {
-  margin: 8.5px;
-  transition: 0.8s;}
-
 ::placeholder {
   font-family: Montserrat, sans-serif;
   font-weight: 400;
@@ -193,6 +189,10 @@ form:hover {
   left: 150px;
   z-index: -1;}
 
+  /* Estilos que se aplicarán a los elementos .drop cuando se haga hover sobre el formulario */
+.container:hover .drops .drop {background-color: rgba(82, 78, 78, 0.35);}
+
+/* Borrado de outline */
 a,
 input:focus,
 select:focus,
@@ -201,7 +201,6 @@ submit:focus {outline: none;}
 
 /* Media Queries para el ancho */
 @media screen and (width < 905px) {.genero {font-size: 14px;}}
-
 @media screen and (width < 605px) {.drop-4 {display: none;}}
 
 @media screen and (width < 465px) {
@@ -214,8 +213,13 @@ submit:focus {outline: none;}
     .drop-7 {width: 75px; height: 75px; bottom: -50px; left: 45px}}
 
 /* Media Queries para el alto */
-@media screen and (height < 740px) { 
-  form:hover {margin: 0;}
+@media screen and (min-height: 740px) { 
+  form:hover {
+    margin: 8.5px;
+    transition: 0.8s;}}
+
+@media screen and (height <= 740px) { 
+  .container:hover .drops .drop {background-color: rgba(183, 183, 183, 0.3);}
   .genero {font-size: 12.8px;}
   body {background: #141414;}
   form input, #centro { 
@@ -224,16 +228,13 @@ submit:focus {outline: none;}
   form {padding: 0.425em 4.5em;}}
 
 @media screen and (height < 692.5px) {
-  form:hover {margin-top:20%;}
   .drop-1, .drop-8, .drop-4 {display: none;}
   form {margin-top: 20%;}}
 
-@media screen and (height < 610px) {
-  form {margin-top: 37.5%;} 
-  form:hover {margin-top:37.5%;}}
-
-@media screen and (height <= 520px) {
-  form {margin-top: 50%;}
-  form:hover {margin-top:50%;}}
+@media screen and (height < 610px) {form {margin-top: 37.5%;}}
+@media screen and (height <= 520px) {form {margin-top: 50%;}}
+@media screen and (height <= 420px) {form {margin-top: 67.5%;}}
+@media screen and (height <= 360px) {form {margin-top: 82.5%;}}
+@media screen and (height <= 300px) {form {margin-top: 90%;}}
 
 /*# sourceMappingURL=estilo.css.map */

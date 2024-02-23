@@ -222,10 +222,18 @@ submit:focus {outline: none;}
     padding: 0.6em;
     margin-bottom: 0.075em;}
   form {padding: 0.425em 4.5em;}}
-@media screen and (height < 692.5px) { 
-    .drop-1, .drop-8, .drop-4 {display: none;}
-    form {margin-top: 20%;}}
-@media screen and (height < 610px) {form {margin-top: 36.5%;}}
-@media screen and (height <= 520px) {form {margin-top: 45%;}}
+
+@media screen and (height < 692.5px) {
+  form:hover {margin-top:20%;}
+  .drop-1, .drop-8, .drop-4 {display: none;}
+  form {margin-top: 20%;}}
+
+@media screen and (height < 610px) {
+  form {margin-top: 37.5%;} 
+  form:hover {margin-top:37.5%;}}
+
+@media screen and (height <= 520px) {
+  form {margin-top: 50%;}
+  form:hover {margin-top:50%;}}
 
 /*# sourceMappingURL=estilo.css.map */

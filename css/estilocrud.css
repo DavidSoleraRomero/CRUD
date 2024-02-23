@@ -154,15 +154,15 @@ table tr:nth-child(even) {background: rgba(197, 197, 197, 0.25);}
     
 /* Media Queries */
 @media screen and (max-width: 1385px) {.drop-1 {left: -32.5px; z-index: -1;}}
-@media screen and (max-width: 980px) { .drop-3 {top: 34%; right: -20px; z-index: -1;}}
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 980px) {.drop-3 {top: 34%; right: -20px; z-index: -1;}}
+@media screen and (max-width: 952.5px) {
     body {background: #000000;}
 
     #insertar {
-        bottom: -6%; 
+        bottom: -5%; 
         font-size: 1.15rem; 
         background: rgba(255, 255, 255, 0.325);
-        margin-bottom: 12%;}
+        margin-bottom: 15%;}
 
     #insertar:hover {background-color: rgb(164, 231, 76, 0.3);}
 
@@ -221,5 +221,4 @@ table tr:nth-child(even) {background: rgba(197, 197, 197, 0.25);}
     @media screen and (max-width: 350px) { 
         .drop-2 {z-index: -1; right: 22.5px;}
 
-        .drop-10 {left: 40%; width: 120px; height: 120px;}
-    }
+        .drop-10 {left: 40%; width: 120px; height: 120px;}}

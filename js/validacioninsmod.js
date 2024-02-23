@@ -28,22 +28,6 @@ function validaUsername() {
     return true;
 }
 
-function validaPasswords() {
-    let password = document.getElementById("password");
-    let passwordtwo = document.getElementById("passwordtwo");
-    const patron = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
-    if (password.value == "" | password.value == null 
-    | password.value.replace(/\s/g, "") == "" | ! patron.test(password.value)
-    | passwordtwo.value != password.value) {
-        anadirClaseError("password");
-        passwordtwo.classList.add("form-novalidado");
-        return false;
-    }
-    eliminarClaseError("password");
-    passwordtwo.classList.remove("form-novalidado");
-    return true;
-}
-
 function validaCentro() {
     let centro = document.getElementById("centros");
     if (centro.value == 0) {
@@ -56,7 +40,7 @@ function validaCentro() {
 
 function validaDNI() {
     let dni = document.getElementById("dni");
-    if (!/^[0-9]{7,8}[A-Z]$/.test(dni.value)) {
+    if (!/^[0-9]{7,8}[A-Za-z]$/.test(dni.value)) {
         anadirClaseError("dni", "form-novalidado");
         return false;
     }

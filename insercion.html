@@ -35,7 +35,7 @@
         <input type="text" name="email" id="email" placeholder="Correo electrónico" onchange="eliminarClaseError('email','form-novalidado')"><br>
         <p class="mensajeHelp" id="emailHelp">Debe introducir un email VÁLIDO</p>
         <input type="text" id="dni" onchange="eliminarClaseError('dni', 'form-novalidado')" name="dni" placeholder="DNI">
-        <input type="number" id="eficiencia" name="eficiencia" min="1" max="10" placeholder="Eficiencia">
+        <input type="number" id="eficiencia" onchange="eliminarClaseError('eficiencia', 'form-novalidado')" name="eficiencia" min="1" max="10" placeholder="Eficiencia">
         <div class="agrupacion">
             <p class="mensajeHelp" id="dniHelp">DNI inválido</p>
             <p class="mensajeHelp" id="eficienciaHelp">Eficiencia (1-10)</p>

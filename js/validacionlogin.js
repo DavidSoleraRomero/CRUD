@@ -3,8 +3,7 @@
 function validaNombre() {
     let nombre = document.getElementById("username");
     let userHelp = document.getElementById("usernameHelp");
-    if (nombre.value == "" | nombre.value == null 
-    | nombre.value.replace(/\s/g, "") == "" | ! /[a-zA-Z0-9]{5,}/.test(nombre.value)) {
+    if (nombre.value.replace(/\s/g, "") == "" | ! /^[a-zA-Z0-9]{8,12}$/.test(nombre.value)) {
         userHelp.style.visibility="visible";
         nombre.classList.add("form-novalidado");
         return false;

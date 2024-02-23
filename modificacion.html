@@ -32,10 +32,10 @@
             </select>
         </div>
         <p class="mensajeHelp" id="centroHelp">Es OBLIGATORIO seleccionar CENTRO</p>
-        <input type="text" name="email" id="email" value="davidsoleraromero@gmail.com" placeholder="Correo electrónico" onchange="eliminarClaseError('email','form-novalidado')"><br>
+        <input type="text" name="email" id="email" value="dsolera@gmail.com" placeholder="Correo electrónico" onchange="eliminarClaseError('email','form-novalidado')"><br>
         <p class="mensajeHelp" id="emailHelp">Debe introducir un email VÁLIDO</p>
         <input type="text" id="dni" value="77504257A" onchange="eliminarClaseError('dni', 'form-novalidado')" name="dni" placeholder="DNI">
-        <input type="number" id="eficiencia" name="eficiencia" min="1" max="10" value="9" placeholder="Eficiencia">
+        <input type="number" id="eficiencia" name="eficiencia" onchange="eliminarClaseError('eficiencia', 'form-novalidado')" min="1" max="10" value="9" placeholder="Eficiencia">
         <div class="agrupacion">
             <p class="mensajeHelp" id="dniHelp">DNI inválido</p>
             <p class="mensajeHelp" id="eficienciaHelp">Eficiencia (1-10)</p>

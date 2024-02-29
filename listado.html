@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlaces a archivos externos -->
     <link rel="stylesheet" href="./css/estilocrud.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="./img/favicon2.png" type="image/x-icon">
     <title>Tabla de datos</title>
+    <!-- Comentario sobre la autoría de la página -->
     <!-- ESTA WEB HA SIDO REALIZADA POR DAVID SOLERA ROMERO 
     HACIENDO USO DE PLANTILLAS DE INTERNET Y MODIFICÁNDOLAS.
     CUALQUIER TRABAJO IGUAL EN LA WEB NO HA SIDO CONSENTIDO -->
 </head>
 <body>
 <div class="container">
+    <!-- Tabla de datos -->
     <table>
         <caption>Tabla de datos</caption>
         <thead>
+            <!-- Cabecera de la tabla -->
             <tr>
                 <th scope="col">USUARIO</th>
                 <th scope="col">EMPLEADO</th>
@@ -27,6 +31,8 @@
             </tr>
         </thead>
         <tbody id="cuerpo">
+            <!-- Datos de la tabla -->
+            <!-- Fila 1 -->
             <tr>
                 <td data-label="User">dsolera</td>
                 <td data-label="Empleado">David Solera Romero</td>
@@ -35,10 +41,12 @@
                 <td data-label="DNI">77504257A</td>
                 <td data-label="Eficiencia">9</td>
                 <td data-label="Editar">
+                    <!-- Iconos para editar y borrar -->
                     <i class="fa fa-refresh" aria-hidden="true"></i>
                     <i class="fa fa-window-close" onclick="confirm('¿Está seguro de que desea borrar a este usuario?')" aria-hidden="true"></i>
                 </td>
             </tr>
+            <!-- Fila 2 -->
             <tr>
                 <td data-label="User">eleiva</td>
                 <td data-label="Empleado">Eloy Leiva López</td>
@@ -47,10 +55,12 @@
                 <td data-label="DNI">23761923L</td>
                 <td data-label="Eficiencia">2</td>
                 <td data-label="Editar">
+                    <!-- Iconos para editar y borrar -->
                     <i class="fa fa-refresh" aria-hidden="true"></i>
                     <i class="fa fa-window-close" onclick="confirm('¿Está seguro de que desea borrar a este usuario?')" aria-hidden="true"></i>
                 </td>
             </tr>
+            <!-- Fila 3 -->
             <tr>
                 <td data-label="User">pgonzau</td>
                 <td data-label="Empleado">Pilar González Augusto</td>
@@ -59,10 +69,12 @@
                 <td data-label="DNI">98376218H</td>
                 <td data-label="Eficiencia">10</td>
                 <td data-label="Editar">
+                    <!-- Iconos para editar y borrar -->
                     <i class="fa fa-refresh" aria-hidden="true"></i>
                     <i class="fa fa-window-close" onclick="confirm('¿Está seguro de que desea borrar a este usuario?')" aria-hidden="true"></i>
                 </td>
             </tr>
+            <!-- Fila 4 -->
             <tr>
                 <td data-label="User">dponce</td>
                 <td data-label="Empleado">Darío Sánchez Ponce</td>
@@ -71,10 +83,12 @@
                 <td data-label="DNI">87299213S</td>
                 <td data-label="Eficiencia">7</td>
                 <td data-label="Editar">
+                    <!-- Iconos para editar y borrar -->
                     <i class="fa fa-refresh" aria-hidden="true"></i>
                     <i class="fa fa-window-close" onclick="confirm('¿Está seguro de que desea borrar a este usuario?')" aria-hidden="true"></i>
                 </td>
             </tr>
+            <!-- Fila 5 -->
             <tr>
                 <td data-label="User">mromero</td>
                 <td data-label="Empleado">María Remedios Trujillo</td>
@@ -83,16 +97,19 @@
                 <td data-label="DNI">54647494U</td>
                 <td data-label="Eficiencia">5</td>
                 <td data-label="Editar">
+                    <!-- Iconos para editar y borrar -->
                     <i class="fa fa-refresh" aria-hidden="true"></i>
                     <i class="fa fa-window-close" onclick="confirm('¿Está seguro de que desea borrar a este usuario?')" aria-hidden="true"></i>
                 </td>
             </tr>
         </tbody>
     </table>
+    <!-- Botón para insertar datos -->
     <div id="insertar">
         <i class="fa fa-plus-circle" aria-hidden="true"></i>
         <span>Insertar datos</span>
     </div>
+    <!-- Elementos decorativos de la página -->
     <div class="drops">
         <div class="drop drop-1"></div>
         <div class="drop drop-2"></div>

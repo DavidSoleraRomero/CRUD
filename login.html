@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlaces a archivos externos -->
     <link rel="stylesheet" href="./css/estilologin.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./img/favicon2.png" type="image/x-icon">
     <title>Log In</title>
+    <!-- Comentario sobre la autoría de la página -->
     <!-- ESTA WEB HA SIDO REALIZADA POR DAVID SOLERA ROMERO 
     HACIENDO USO DE PLANTILLAS DE INTERNET Y MODIFICÁNDOLAS.
     CUALQUIER TRABAJO IGUAL EN LA WEB NO HA SIDO CONSENTIDO -->
@@ -15,27 +17,36 @@
 <body>
     
 <div class="container">
+    <!-- Formulario de inicio de sesión -->
     <form action="" method="post" onsubmit="return validacion()">
+        <!-- Título del formulario -->
         <p id="login">LOG IN</p>
+        <!-- Campo de entrada para el nombre de usuario -->
         <input type="text" id="username" name="username" placeholder="Usuario" onchange="borraErrores('username')"><br>
+        <!-- Mensaje de ayuda para el nombre de usuario -->
         <p class="mensajeHelp" id="usernameHelp" >Introduzca un usuario CORRECTO</p>
+        <!-- Campo de entrada para la contraseña -->
         <input type="password" id="password" placeholder="Contraseña" name="password" onchange="borraErrores('password')"><br>
+        <!-- Mensaje de ayuda para la contraseña -->
         <p class="mensajeHelp" id="passwordHelp">Introduzca una contraseña VÁLIDA</p>
+        <!-- Botón de enviar formulario -->
         <input id="signin" type="submit" value="SIGN IN"><br>
     </form>
 
+    <!-- Elementos decorativos de la página -->
     <div class="drops">
-    <div class="drop drop-1"></div>
-    <div class="drop drop-2"></div>
-    <div class="drop drop-3"></div>
-    <div class="drop drop-4"></div>
-    <div class="drop drop-5"></div>
-    <div class="drop drop-6"></div>
-    <div class="drop drop-7"></div>
-    <div class="drop drop-8"></div>
+        <div class="drop drop-1"></div>
+        <div class="drop drop-2"></div>
+        <div class="drop drop-3"></div>
+        <div class="drop drop-4"></div>
+        <div class="drop drop-5"></div>
+        <div class="drop drop-6"></div>
+        <div class="drop drop-7"></div>
+        <div class="drop drop-8"></div>
     </div>
 </div>
 
+<!-- Script para la validación del formulario -->
 <script src="./js/validacionlogin.js"></script>
 
 </body>

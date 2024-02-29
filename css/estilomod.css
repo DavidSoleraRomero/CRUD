@@ -189,7 +189,7 @@ form input[type=submit]:active {background: rgba(255, 255, 255, 0.2);}
   left: 150px;
   z-index: -1;}
 
-  /* Estilos que se aplicarán a los elementos .drop cuando se haga hover sobre el formulario */
+/* Estilos que se aplicarán a los elementos .drop cuando se haga hover sobre el formulario */
 .container:hover .drops .drop {background-color: rgba(82, 78, 78, 0.35);}
 
 /* Borrado de outline */

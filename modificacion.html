@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlaces a archivos externos -->
     <link rel="stylesheet" href="./css/estilomod.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./img/favicon2.png" type="image/x-icon">
     <title>Modificar datos</title>
+    <!-- Comentario sobre la autoría de la página -->
     <!-- ESTA WEB HA SIDO REALIZADA POR DAVID SOLERA ROMERO 
     HACIENDO USO DE PLANTILLAS DE INTERNET Y MODIFICÁNDOLAS.
     CUALQUIER TRABAJO IGUAL EN LA WEB NO HA SIDO CONSENTIDO -->
@@ -15,15 +17,23 @@
 <body>
     
 <div class="container">
+    <!-- Formulario para modificar datos -->
     <form action="" method="post" onsubmit="return validacion()">
+        <!-- Título del formulario -->
         <p id="titulo">MODIFICACIÓN</p>
+        <!-- Campo de entrada para el nombre de usuario -->
         <input type="text" name="username" id="username" value="dsolera" onchange="eliminarClaseError('username','form-novalidado')" placeholder="Usuario"><br>
+        <!-- Mensaje de ayuda para el nombre de usuario -->
         <p class="mensajeHelp" id="usernameHelp">Introduce un usuario CORRECTO</p>
+        <!-- Campo de entrada para el nombre real -->
         <input type="text" name="nombre" id="nombre" value="David" placeholder="Nombre real" onchange="eliminarClaseError('nombre','form-novalidado')"><br>
+        <!-- Mensaje de ayuda para el nombre real -->
         <p class="mensajeHelp" id="nombreHelp">Debe INTRODUCIR su nombre</p>
         <div id="centro">
+            <!-- Etiqueta y lista desplegable para seleccionar el centro -->
             <label for="centros">Centro:</label>
             <select name="centros" onchange="eliminarClaseError('centro','form-novalidado')" id="centros">
+                <!-- Opciones para seleccionar el centro -->
                 <option value="0">Elige centro</option>
                 <option value="1" selected>Alan Turing</option>
                 <option value="2">IES Campanillas</option>
@@ -31,30 +41,42 @@
                 <option value="4">Universidad Málaga</option>
             </select>
         </div>
+        <!-- Mensaje de ayuda para el centro -->
         <p class="mensajeHelp" id="centroHelp">Es OBLIGATORIO seleccionar CENTRO</p>
+        <!-- Campo de entrada para el correo electrónico -->
         <input type="text" name="email" id="email" value="dsolera@gmail.com" placeholder="Correo electrónico" onchange="eliminarClaseError('email','form-novalidado')"><br>
+        <!-- Mensaje de ayuda para el correo electrónico -->
         <p class="mensajeHelp" id="emailHelp">Debe introducir un email VÁLIDO</p>
+        <!-- Campo de entrada para el DNI -->
         <input type="text" id="dni" value="77504257A" onchange="eliminarClaseError('dni', 'form-novalidado')" name="dni" placeholder="DNI">
+        <!-- Campo de entrada para la eficiencia -->
         <input type="number" id="eficiencia" name="eficiencia" onchange="eliminarClaseError('eficiencia', 'form-novalidado')" min="1" max="10" value="9" placeholder="Eficiencia">
         <div class="agrupacion">
+            <!-- Mensajes de ayuda para el DNI y la eficiencia -->
             <p class="mensajeHelp" id="dniHelp">DNI inválido</p>
             <p class="mensajeHelp" id="eficienciaHelp">Eficiencia (1-10)</p>
         </div>
         <div onclick="ocultaError('gender')">
+            <!-- Selección de género -->
             <input type="radio" id="hombre" name="gender" value="Hombre" checked>
             <label class="genero" for="hombre">Hombre</label>
             <input type="radio" id="mujer" name="gender" value="Mujer">
             <label class="genero" for="mujer">Mujer</label>
             <input type="radio" id="otro" name="gender" value="Otro">
             <label class="genero" for="otro">Otro</label><br>
+        <!-- Mensaje de ayuda para el género -->
         <p class="mensajeHelp" id="genderHelp">DEBE ELEGIR un género</p>
         </div>
+        <!-- Casilla de verificación para aceptar notificaciones -->
         <input type="checkbox" checked onchange="eliminarClaseError('notificaciones', 'errorCheckbox')" id="notificaciones" name="notificaciones" value="Notificaciones">
         <label for="notificaciones">Acepto recibir notificaciones</label><br>
+        <!-- Mensaje de ayuda para las notificaciones -->
         <p class="mensajeHelp" id="notificacionesHelp">DEBE ACEPTAR las notificaciones</p>
+        <!-- Botón de enviar formulario -->
         <input id="modificar" type="submit" value="MODIFICAR"><br>
     </form>
 
+    <!-- Elementos decorativos de la página -->
     <div class="drops">
     <div class="drop drop-1"></div>
     <div class="drop drop-2"></div>
@@ -67,6 +89,7 @@
     </div>
 </div>
 
+<!-- Script para la validación del formulario -->
 <script src="./js/validacioninsmod.js"></script>
 
 </body>
